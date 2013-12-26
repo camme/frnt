@@ -19,5 +19,16 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/camme/frontender/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "mocha": "~1.16.2",
+    "grunt-simple-mocha": "~0.4.0",
+    "should": "~2.1.1",
+    "express": "~3.4.7",
+    "express-dot": "~0.1.0"
+  },
+  "dependencies": {
+    "request": "~2.30.0"
   }
 }
