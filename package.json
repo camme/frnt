@@ -1,0 +1,23 @@
+{
+  "name": "frontender",
+  "version": "0.0.1",
+  "description": "Front-end server for any solution. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:camme/frontender.git"
+  },
+  "keywords": [
+    "frontend",
+    "server",
+    "fast"
+  ],
+  "author": "Camilo Tapia <camilo.tapia@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/camme/frontender/issues"
+  }
+}
