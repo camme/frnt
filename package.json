@@ -1,6 +1,6 @@
 {
-  "name": "frontender",
-  "version": "0.0.1",
+  "name": "frnt",
+  "version": "0.0.3",
   "description": "Front-end server for any solution. ",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:camme/frontender.git"
+    "url": "git@github.com:camme/frnt.git"
   },
   "keywords": [
     "frontend",
@@ -18,7 +18,7 @@
   "author": "Camilo Tapia <camilo.tapia@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/camme/frontender/issues"
+    "url": "https://github.com/camme/frnt/issues"
   },
   "devDependencies": {
     "grunt": "~0.4.2",
