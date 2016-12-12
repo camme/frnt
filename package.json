@@ -1,6 +1,6 @@
 {
   "name": "frnt",
-  "version": "0.4.1",
+  "version": "0.4.3",
   "description": "Front-end server for any solution. ",
   "main": "index.js",
   "scripts": {
