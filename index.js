@@ -1,1 +1,1 @@
-module.exports = require("./lib/frontender.js");
+module.exports = require("./lib/index.js");

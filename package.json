@@ -1,6 +1,6 @@
 {
   "name": "frnt",
-  "version": "0.4.3",
+  "version": "0.5.0",
   "description": "Front-end server for any solution. ",
   "main": "index.js",
   "scripts": {
@@ -25,8 +25,8 @@
     "mocha": "~1.16.2",
     "grunt-simple-mocha": "~0.4.0",
     "should": "~2.1.1",
-    "express": "~3.4.7",
-    "express-dot": "~0.1.0"
+    "express": "4.14.1",
+    "express-dot": "0.1.0"
   },
   "dependencies": {
     "request": "~2.30.0"

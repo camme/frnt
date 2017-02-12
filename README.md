@@ -9,37 +9,44 @@ Front-end server for your website, in nodejs.
 
 Super simple to setup:
 
-    var path = require('path');
-    var frnt = require('frnt'); / Loadit 
-    var express = require('express');
-    var app = express();
-    
-    // template engine, can be whatever you like. 
-    var doT = require('express-dot');
-    
-    // make sure that your routes are set before the frnt middleware
-    app.use(app.router);
-    
-    // here is where we set up the middleware
+    const frnt = require('frnt');
+    const fs = require("fs");
+    const path = require("path");
+    const express = require('express');
+    const app = express();
+    const doT = require('express-dot');
+
+    const port = process.env.PORT || 8080;
+
+    // The link to your wordpress site
+    const contentUrl = process.env.CONTENT_URL || 'http://localhost:8081';
+
+    // Define where the public files are, in this example ./public
+    app.use(express.static(path.join(__dirname, 'public')));
+
+    // Setup the frnt middleware with the link to the internal server
     app.use(frnt.init({
-    
-        // this is the internal URL for the data.
-        // so each call to your site, say www.foo.com/hello
-        // will be proxied to the address below, which in the foo example would be
-        // http://localhost:8080/hello
-        // As long as http://localhost:8080/hello returns json, say:
-        // { 
-        //     title: 'hello world'
-        //     module: 'index'
-        // }
-        // It will be merged with your template (which corresponds with the name given in 'module'
-        proxyUrl: "http://localhost:8080" 
+        proxyUrl: contentUrl,
+        logLevel: 'verbose'
     }));
-    
+
     // define rendering engine
     app.set('views', path.join(__dirname, "views"));
     app.set('view engine', 'html' );
     app.engine('html', doT.__express );
-    
-    app.listen(3000);
-    
+
+    app.listen(port, err => {
+        if (err) {
+            console.log('Error, could not start:', err);
+            process.exit(1);
+        }
+        console.log('\nStarted server on http://localhost:%s\n', port);
+    }); 
+
+
+### Example
+
+To run the example, go into the example/ folder and 
+
+    npm i
+    CONTENT_URL=http://your-json-based-content-url PORT=8080 node index.js

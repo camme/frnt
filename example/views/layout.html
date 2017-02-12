@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FOO</title>
+</head>
+<body>
+    <div class="main-list">
+        <section class="blog-list">
+            {{~it.posts: post}}
+            <div class="article-holder post">
+                <h2><a href="{{= post.permalink}}">{{= post.post_title}}</a></h2>
+            </div>
+            {{~}}
+        </section>
+    </div>
+</body>
+</html>
